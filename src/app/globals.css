@@ -9,6 +9,12 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
+  --montserrat-header {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+  }
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
     #16abff33 0deg,

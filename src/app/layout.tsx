@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Trust - Get local taskers",
+  title: "Trust - Get trusted local taskers",
   description: "trusted workers online ",
 };
 
