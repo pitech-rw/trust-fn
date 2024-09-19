@@ -18,6 +18,14 @@ const AuthPage: React.FC = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log('Login submitted with:', { email, password });
+    const endPoint = '/api/v1/auth/login'
+    const body = {
+      email,
+      password,
+    }
+    const res = auth(endPoint, body)
+    console.info(res)
+
     // Reset form fields after submission
     setEmail('');
     setPassword('');

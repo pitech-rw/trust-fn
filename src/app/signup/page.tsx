@@ -5,17 +5,39 @@ import Footer from '../ui/footer/footer'
 import styles from '../auth/signin.module.css'
 import { z } from 'zod'
 import { auth } from '../utils/server'
+import { User } from '../utils/types'
+import { useNotification } from '../ui/shared/notification/notificationContext'
 const SignupPage = () => {
+  const { addNotification } = useNotification()
   const [passwordMatch, setPasswordMatch] = useState(true) 
+  const [serverError, setServerError] = useState(null)
     const handleSignup = async (e: any) => {
       e.preventDefault()
 
-          const res = await auth('/api/v1/users', formData)
-          const user = JSON.stringify(res)
+          const sanitizedResponse = await auth('/api/v1/auth/signup', formData)
+          
+          // check if the response has a message property
+          if (sanitizedResponse.hasOwnProperty('message')) {
+            setServerError(sanitizedResponse.message)
+            // show the error message
+            addNotification(sanitizedResponse.message, 'error')
+            return null
+          }
+          const res = sanitizedResponse as Response
+          const user = sanitizedResponse as User
+
           console.info(user)
           if (res.ok && user ) return user
           return null
     }
+
+    // add a listener to the serverError state
+    useEffect(() => {
+      if (serverError) {
+        addNotification(serverError, 'error')
+      }
+    }, [serverError])
+
 
   const [password_, setPassword_] = useState('x')
   const [formError, setFormError] = useState('')
