@@ -1,15 +1,16 @@
-.footer {
+.footerContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
   background-color: #333333; /* Dark background color */
   color: white;
   padding: 40px 20px;
   text-align: center;
+  margin: 1rem;;
 }
 
-.footerContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
+.footer {
 }
 
 .footer h4 {

@@ -2,8 +2,7 @@ import styles from './footer.module.css';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footerContainer}>
+    <footer className={styles.footerContainer}>
         <div className={styles.quickLinks}>
           <h4>Quick Links</h4>
           <ul>
@@ -51,7 +50,6 @@ const Footer = () => {
           <p>Email: <a href="mailto:info@trust.rw">info@trust.rw</a></p>
           <p>Phone: <a href="tel:+250787799082">(250) 787-799082</a></p>
         </div>
-      </div>
     </footer>
   );
 };

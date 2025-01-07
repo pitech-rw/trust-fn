@@ -1,8 +1,7 @@
 .navigation {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    padding: 0 20px;
+    margin: 1rem;
 }
 .nav_right {
     display: flex;

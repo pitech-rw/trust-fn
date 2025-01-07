@@ -36,7 +36,7 @@ const Nav = () => {
         }
     }, [mobileMenuOpen])
     return (
-        <div className={styles.navigation}>
+        <header className={styles.navigation}>
             <div className={styles.nav_left}>
                 <Link href='/'><h1>Trust</h1></Link>
             </div>
@@ -75,7 +75,7 @@ const Nav = () => {
                     }
                 </ul>
             </div>
-        </div>
+        </header>
     )
 }
 

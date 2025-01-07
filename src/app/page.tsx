@@ -7,11 +7,11 @@ import CallToAction from "./ui/cta/cta";
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <HeroSection />
       <ServicesOverview />
       <HowItWorks />
       <CallToAction />
-    </main>
+    </div>
   );
 }
