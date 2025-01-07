@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NotificationProvider } from "./ui/shared/notification/notificationContext";
+import Nav from '@/app/ui/shared/top navbar/nav';
+import Footer from '@/app/ui/shared/footer/footer';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +25,12 @@ export default function RootLayout({
 
       <body className={inter.className}>
         <NotificationProvider>
+          <main>
+          <Nav />
           {children}
+          <Footer />
+
+          </main>
         </NotificationProvider>
         </body>
     </html>

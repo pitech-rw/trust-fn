@@ -34,7 +34,7 @@ const styles = {
         backgroundColor: '#61dafb',
         color: '#282c34',
     },
-    geekyMessage: {
+    cheekyMessage: {
         fontSize: '1rem',
         marginTop: '2rem',
         color: '#f39c12',
@@ -48,7 +48,7 @@ const NotFound = () => {
             <h1 style={styles.notFoundTitle}>404</h1>
             <p style={styles.notFoundMessage}>{Message}</p>
             <Link href="/" style={styles.notFoundLink}>Go back home</Link>
-            <p style={styles.geekyMessage}>{cheekyMessage}</p>
+            <p style={styles.cheekyMessage}>{cheekyMessage}</p>
         </div>
     );
 };

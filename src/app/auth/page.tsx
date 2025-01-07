@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import { useFormState, useFormStatus } from 'react-dom';
 import styles from './signin.module.css';
-import Nav from '@/app/ui/top navbar/nav'
-import Footer from '@/app/ui/footer/footer'
+import Nav from '@/app/ui/shared/top navbar/nav'
+import Footer from '@/app/ui/shared/footer/footer'
 import StyledLink from '@/app/ui/shared/Link/StyledLink';
 import { auth } from '@/app/utils/server';
 
@@ -41,7 +41,6 @@ const AuthPage: React.FC = () => {
 
   return (
     <main>
-      <Nav />
       <div className={styles.authContainer}>
         <div className={styles.authHeader}>
           <h2 className={styles.title}>{isRegister ? 'Register': 'Sign In'}</h2>
@@ -139,7 +138,6 @@ const AuthPage: React.FC = () => {
           )
         }
       </div>
-      <Footer />
     </main>
   );
 };
