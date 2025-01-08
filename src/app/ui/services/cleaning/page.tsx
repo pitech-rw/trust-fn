@@ -1,8 +1,6 @@
 "use client"
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import Nav from '@/app/ui/shared/top navbar/nav';
-import Footer from '@/app/ui/shared/footer/footer';
-import Loading from '../../shared/suspense/loading';
 
 const ServicePage = () => {
     const [service, setService] = useState(null);
@@ -18,13 +16,27 @@ const ServicePage = () => {
         }
     }, [serviceId]);
 
-    if (!service) {
+    /*if (!service) {
         return  <Loading />;
-    }
+    }*/
 
     return (
         <div>
-            <h1>{service}</h1>
+            <h1>Available cleaning service providers</h1>
+            <div className='service-provider-card'>
+                <div className='card-header'>
+                    <Image src='/assets/providers/happy-dog.jpg' alt='Happy dog' />
+                </div>
+                <div className='card-body'>
+                    <h3 className='provider-name'>RL Grime</h3>
+                    <p className='provider-title'>Cleaner</p>
+                    <p className='provider-description'>Excellent, all-round house helper</p>
+                    <div className='card-footer'>
+                        <button className='contact-button'>Contact</button>
+                        <button className='view-profile-button'>View profile</button>
+                    </div>
+                </div>
+            </div>
             <p>{service}</p>
             {/* Add more service details as needed */}
         </div>
