@@ -1,9 +1,9 @@
 'use client'
-import Nav from "../top navbar/nav"
+import Nav from "../shared/top navbar/nav"
 import { data } from "../data"
 import { useEffect } from "react"
 import { Suspense } from "react"
-import Loading from "../loading"
+import Loading from "../shared/ suspense/loading"
 
 const SearchPage: React.FC = async () => {
     let content
